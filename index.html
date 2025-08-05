@@ -26,21 +26,64 @@
       color: red;
       margin-top: 10px;
     }
+    .stanza {
+      margin-bottom: 30px;
+    }
+    .stanza p {
+      margin: 4px 0;
+    }
   </style>
 </head>
 <body>
 
   <h1>Välkommen!</h1>
   <p>Skriv in lösenordet för att se innehållet:</p>
+  <p>Använd ledtråden!!!</p>
+
+
 
   <input type="password" id="passwordInput" placeholder="Lösenord">
   <button onclick="checkPassword()">OK</button>
   <div class="error" id="errorMessage"></div>
 
   <div id="content">
-    <h2>Hemligt innehåll</h2>
-    <p>Här är den hemliga texten! 🌞🏖️</p>
+    <h2>Tid - En dikt av Benjamin Sjöstrand, skapad ur en känlsa på bussen</h2>
+    <div class="stanza">
+    <p>Framåt i livet vi färdas med hast,</p>
+    <p>Ofrivilligt fylls det av glädje och sorg.</p>
+    <p>Relationer är en gåva men även en last,</p>
+    <p>Vissa kan efterliknas en trygg borg.</p>
   </div>
+
+  <div class="stanza">
+    <p>Vi tar och ger från varandra var dag,</p>
+    <p>Utan att ibland fundera på hur.</p>
+    <p>Att visa tacksamhet borde vara en lag,</p>
+    <p>För ingen vet slutet på sitt ur.</p>
+  </div>
+
+  <div class="stanza">
+    <p>Att minnas det fina vi gjort för varann</p>
+    <p>Är ofta den sista resursen vi har.</p>
+    <p>Minnet är starkt men försvinner iblann.</p>
+    <p>Lev nu så att du ger mer än du tar.</p>
+  </div>
+
+  <div class="stanza">
+    <p>Dagen är slagen då drömmar blir fakta,</p>
+    <p>För vissa är dagen allt annat än fin.</p>
+    <p>Men alla dagar är värda att vakta,</p>
+    <p>För det kommer en dag du somnar in.</p>
+  </div>
+
+  <div class="stanza">
+    <p>Så glädjs med livets alla kanter och hörn,</p>
+    <p>Och se vad det har dig att ge,</p>
+    <p>För även om livet slår sig en törn,</p>
+    <p>Vakna upp till en ny dag och le.</p>
+  </div>
+
+
 
   <script>
     function checkPassword() {
