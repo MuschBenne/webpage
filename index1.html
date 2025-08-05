@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Hemlig sida</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #content {
+      display: none;
+      margin-top: 50px;
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Välkommen!</h1>
+  <p>Skriv in lösenordet för att se innehållet:</p>
+
+  <input type="password" id="passwordInput" placeholder="Lösenord">
+  <button onclick="checkPassword()">OK</button>
+  <div class="error" id="errorMessage"></div>
+
+  <div id="content">
+    <h2>Hemligt innehåll</h2>
+    <p>Här är den hemliga texten! 🌞🏖️</p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const correctPassword = "sommarfrid";
+      const input = document.getElementById("passwordInput").value;
+      const error = document.getElementById("errorMessage");
+
+      if (input === correctPassword) {
+        document.getElementById("content").style.display = "block";
+        error.textContent = "";
+      } else {
+        error.textContent = "Fel lösenord. Försök igen.";
+        document.getElementById("content").style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
