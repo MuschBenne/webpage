@@ -8,30 +8,53 @@
       font-family: Arial, sans-serif;
       text-align: center;
       margin-top: 100px;
+      background-image: url('bakgrund.jpg'); /* <-- Byt till din bild */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white; /* Vit text för kontrast */
+      position: relative;
     }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Halvgenomskinlig mörk overlay */
+      z-index: -1;
+    }
+
     #content {
       display: none;
       margin-top: 50px;
     }
+
     #intro {
       margin-bottom: 30px;
     }
+
     input[type="password"] {
       padding: 10px;
       font-size: 16px;
     }
+
     button {
       padding: 10px 20px;
       font-size: 16px;
       margin-left: 10px;
     }
+
     .error {
       color: red;
       margin-top: 10px;
     }
+
     .stanza {
       margin-bottom: 30px;
     }
+
     .stanza p {
       margin: 4px 0;
     }
@@ -39,12 +62,15 @@
 </head>
 <body>
 
+  <!-- Overlay för mörk bakgrund -->
+  <div class="overlay"></div>
+
   <div id="intro">
     <h1>Välkommen!</h1>
     <p>Skriv in lösenordet för att se innehållet:</p>
     <p>Använd ledtråden!!!</p>
     <p>Den ena hette fången, den andra rimmar på ledtråden och slutade</p>
-    <p>"Men om jag alltid fick den att infinna, skulle jag då sakna min ***********"</p>
+    <p>"Men om jag alltid fick den att infinna, skulle jag då sakna min **********"</p>
   </div>
 
   <input type="password" id="passwordInput" placeholder="Lösenord">
@@ -53,7 +79,7 @@
 
   <div id="content">
     <h2>Tid - En dikt av Benjamin Sjöstrand, skapad ur ett samtal på en buss</h2>
-    <h2>Tack för inspiration och att du bidrog till årets sommarfrid</h2>
+    <h2>Tack för ett fint samtal som inspirerade mig till att skriva denna</h2>
 
     <div class="stanza">
       <p>Framåt i livet vi färdas med hast,</p>
